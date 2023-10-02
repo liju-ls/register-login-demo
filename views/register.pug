@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <form action="/auth/register" method="post">
+      <div>
+        <h1>Register</h1>
+        if(warning)
+          p #{warning}
+      </div>
+      <div>
+        <input name="username" type="text" placeholder="Username" required />
+      </div>
+      <div>
+        <input name="email" type="email" placeholder="Email" required />
+      </div>
+      <div>
+        <input name="password" type="text" placeholder="Password" required />
+      </div>
+      <div>
+        <button id="submit-btn" type="submit">Register</button>
+        <p>Already have an account? <a href="/login">Login</a></p>
+      </div>
+    </form>
+  </body>
+</html>

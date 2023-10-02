@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <form action="/auth/login" method="post" id="login">
+      <div>
+        <h1>Login</h1>
+        if(warning)
+          p #{warning}
+      </div>
+      <div>
+        <input name="email" type="email" placeholder="123@abc.com" required />
+      </div>
+      <div>
+        <input name="password" type="text" placeholder="******" required />
+      </div>
+      <div><button type="submit">Login</button></div>
+      <div>
+        <p>Forget password? <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href="/register">Register</a></p>
+      </div>
+    </form>
+  </body>
+</html>
