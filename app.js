@@ -7,14 +7,14 @@ const cookieParser = require("cookie-parser");
 const pug = require("pug");
 const path = require("path");
 
+require("dotenv").config();
+
 try {
-  mongoose.connect(process.env.DB_URL);
+  mongoose.connect(`${process.env.DB_URL}${process.env.DB_NAME}`);
   console.log("MongoDB connected.");
 } catch (err) {
   console.log(err);
 }
-
-require("dotenv").config();
 
 app.set("view engine", "pug");
 app.use(cookieParser());
